@@ -6,11 +6,11 @@ inputs.forEach((input) => {
   const label = document.createElement('label');
 
   label.className = 'field-label';
-  label.htmlFor = input.getAttribute('id');
-  label.textContent = input.getAttribute('name');
+  label.htmlFor = input.id;
+  label.textContent = input.name;
 
   input.before(label);
 
-  input.setAttribute('placeholder', input.getAttribute('name'));
+  input.setAttribute('placeholder', input.name.toUpperCase());
 
 });
